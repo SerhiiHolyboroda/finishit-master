@@ -286,8 +286,12 @@ var selector = document.getElementById('borders');
         
       for( let i = 0 ; i < rows ; i++){
           let tr = document.createElement('tr');
+          tr.style.borderStyle  = value ;
+      tr.style.borderColor  = value1 ;
           for(let j = 0; j< cols ; j++){
               let td = document.createElement('td')
+              td.style.borderStyle  = value ;
+      td.style.borderColor  = value1 ;
               td.style.height =  heightTD.value + 'px';
               td.style.width = widthTD.value + 'px';
               tr.appendChild(td)
@@ -319,18 +323,20 @@ save.addEventListener('click', function(){
      
 })
 
-
-ctable.addEventListener('click', function(){
+ 
+clist.addEventListener('click', function(){
     let co = document.querySelector('.countLi')
      
     let ul =  document.createElement('ul')
-     
+    let li =  document.createElement('li')
+      
   li.innerHTML +=  "li";
  
   ul.appendChild(li);
  div1.appendChild(ul)
  chose1.style.display = 'none';
     tablecreator.style.display = 'none';
+    listreactor.style.display = 'none';
     move.style.display = 'block';
 
     
