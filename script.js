@@ -80,15 +80,43 @@ but.addEventListener('click', function(){
 //               alert('fdsfs')
 //            } 
 //            } 
-var e = document.getElementById("select");
-var d = document.getElementsByName("radioButton");
- console.log(e.value)
+
+let e = document.getElementById("select");
+ 
+ 
+ 
 f1.onchange = f1.oninput = calcTotal;
  
- function calcTotal() {
 
+
+
+
+
+
+ 
+ function calcTotal() {
+//     let f = 12
+//     
+//let rad = document.querySelector(`.n${f}px`);
+//     console.log(rad.value)
+//    for (let i=0;i<rad.length; i++) {
+//        if (rad[i].checked) {
+//            alert('Выбран '+i+' radiobutton');
+//        }
+//    }
+ let rad=document.getElementsByName('radioButton');
+    for (let i=0;i<rad.length; i++) {
+        if (rad[i].checked) {
+            console.log(rad[i].value)
+            console.log(div1.style.fontWeight)
+           div1.style.fontSize = rad[i].value
+        }
+    }
+      
+// div1.style.fontWeight = d.value;
+ 
 div1.style.fontFamily = e.value;
-div1.style.fontWeight = d.value;
+ 
      
  }
 
@@ -198,7 +226,7 @@ cursive.onchange  = callme;
       if(bold.checked == true && cursive.checked == true ){div1.style.fontWeight =  "bold" ;   div1.style.fontFamily  = "cursive" ; }
  if(bold.checked == true )  div1.style.fontWeight =  "bold" ;
  if(bold.checked == false )  div1.style.fontWeight =  "" ;
- if(cursive.checked == true )  div1.style.fontFamily = "cursive"  ;
+ if(cursive.checked == true )  div1.style.fontWeight = "cursive"  ;
  if(cursive.checked == false )  div1.style.fontFamily = ""  ;
  }
 
@@ -225,10 +253,10 @@ lists.onchange  = callmeplease2;
       
  if(tables.checked == true )  tablecreator.style.display = 'block';
   listreactor.style.display = 'none';
- 
+ chose1.style.display = 'none';
   }
 function callmeplease2() {
-      
+      chose1.style.display = 'none';
   
  if(lists.checked == true )  listreactor.style.display = 'block';
  tablecreator.style.display = 'none';
@@ -243,6 +271,7 @@ let widthTD = document.querySelector('.widthTD')
 let heightTD = document.querySelector('.heightTD')   
 let typeB = document.querySelector('.typeB') 
 var selector = document.getElementById('borders');
+    
     var value = selector[selector.selectedIndex].value;
     var selector1 = document.getElementById('bcolors');
     var value1 = selector1[selector1.selectedIndex].value;
@@ -326,13 +355,19 @@ save.addEventListener('click', function(){
  
 clist.addEventListener('click', function(){
     let co = document.querySelector('.countLi')
-     
-    let ul =  document.createElement('ul')
-    let li =  document.createElement('li')
-      
-  li.innerHTML +=  "li";
- 
-  ul.appendChild(li);
+    let lists1 = document.querySelector('#lists1')
+      console.log(co.value)
+     let ul =  document.createElement('ul') 
+     if(lists1.value == 'circle')   ul.style.listStyle  = 'circle'
+     if(lists1.value == 'disc')  ul.style.listStyle  = 'disc'
+     if(lists1.value == 'square')   ul.style.listStyle  = 'square'
+//    let li =  document.createElement('li')
+    let li =  'li'
+      for(let i = 0; i < co.value ; i++){
+//    ul.appendChild(document.createTextNode("ul"));
+ ul.innerHTML += `<li>${li}</li>`;
+//  ul.appendChild(li);
+      }
  div1.appendChild(ul)
  chose1.style.display = 'none';
     tablecreator.style.display = 'none';

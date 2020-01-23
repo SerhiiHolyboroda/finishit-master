@@ -1,15 +1,80 @@
 .move{
-    padding: 10% 0 0;
-    margin: 0 auto;
+  margin-top: 200px;
+/*    margin-left: 200px;*/
 }
-
-
-  
+#styleforstyle{
+   margin-top: 10px;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+#styleforedit{
+      margin-top: 10px;
+    border-radius: 5px;
+      border-radius: 5px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+#div1{
+     background-color:#EBEEF1;
+    height: 40%;
+    width: 50%;
+    border: 1px solid #0004;
+    border-radius: 5px;
+    padding: 30px 30px 60px 50px;
+}
+#styleme{
+     background-color:#EBEEF1;
+    height: 40%;
+    width: 50%;
+    border: 1px solid #0004;
+    border-radius: 5px;
+    padding: 30px 30px 60px 50px;
+}
+.tablecreator{
+    margin: 0 auto;
+  margin-top: 100px; 
+     padding: 30px 30px 60px 50px;
+    height: 80%;
+    width: 80%;
+     background-color:#EBEEF1;
+     border: 1px solid #0004;
+    border-radius: 5px;
+}  
+.listreactor{
+    margin: 0 auto;
+  margin-top: 100px; 
+     padding: 30px 30px 60px 50px;
+    height: 80%;
+    width: 80%;
+     background-color:#EBEEF1;
+     border: 1px solid #0004;
+    border-radius: 5px;
+}  
 .divin{
+    
   margin: 0 auto;
   margin-top: 100px;
 }
- 
+#hidecolor{
+     margin-left: 70%;
+    
+}
+#hidebackground{
+     margin-left: 70%;
+}
+.hidediv{
+    margin: 0 auto;
+       height: 80%;
+    width: 70%;
+     background-color:#EBEEF1;
+     border: 1px solid #0004;
+    border-radius: 5px;
+}
 /*
 #div1{
    height: 350px;
