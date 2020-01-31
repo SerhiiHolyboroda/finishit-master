@@ -1,3 +1,4 @@
+//Доступаємось до елементів 
 let f1 = document.forms['f1'];
 let hide = f1.elements['hide'];
 let hide1 = f1.elements['hide1'];
@@ -11,14 +12,15 @@ let hidediv = document.querySelector('.hidediv')
 let div1 = document.querySelector('#div1');
 console.log(div1.innerHTML);
 // hide.value = div1.innerTEXT;
-
+//Доступаємось до елементів 
 // a.innerHTML += '<p>Lorem ipsum dolor sit amet</p>';
 // console.log(a);
 
-hide.style.display = 'none';
+hide.style.display = 'none'; 
 but.style.display = 'none';
 add.style.display = 'none';
 hide1.style.display = 'none';
+
 edit.addEventListener('click', function () {
     hide.style.display = 'block';
     hide1.style.display = 'none';
@@ -93,7 +95,7 @@ f1.onchange = f1.oninput = calcTotal;
 
 
 
-
+//функція вибору розміру тексту
 function calcTotal() {
     //     let f = 12
     //     
@@ -130,7 +132,7 @@ getDiv = x => document.querySelector(x);
 //getDiv("#div1").hidden = false;
 //}
 
-
+//вибір кольору  тексту  фону
 getDiv('#divs1').onclick = function (event) {
     div1.style.color = '#03fcd3';
     //document.body.style.backgroundColor = '#03fcd3';
@@ -177,7 +179,7 @@ butfcol.onclick = function (event) {
     getDiv("#hidecolor").hidden = true;
 
 }
-
+//вибір кольору   фону
 getDiv('#divs10').onclick = function (event) {
     div1.style.backgroundColor = '#03fcd3';
     //document.body.style.backgroundColor = '#03fcd3';
@@ -222,15 +224,16 @@ let cursive = document.querySelector('#customCheck2')
 bold.onchange = callme;
 cursive.onchange = callme;
 
+//функція вибору стилю тексту
 function callme() {
     if (bold.checked == true && cursive.checked == true) {
         div1.style.fontWeight = "bold";
-        div1.style.fontFamily = "cursive";
+        div1.style.fontStyle = "italic";
     }
     if (bold.checked == true) div1.style.fontWeight = "bold";
     if (bold.checked == false) div1.style.fontWeight = "";
-    if (cursive.checked == true) div1.style.fontWeight = "cursive";
-    if (cursive.checked == false) div1.style.fontFamily = "";
+    if (cursive.checked == true) div1.style.fontStyle = "italic";
+    if (cursive.checked == false) div1.style.fontStyle = "";
 }
 
 let chose1 = document.querySelector('.chose1')
@@ -252,6 +255,7 @@ let lists = document.querySelector('.listss')
 tables.onchange = callmeplease1;
 lists.onchange = callmeplease2;
 
+//користувач обирає табилцю чи список
 function callmeplease1() {
 
     if (tables.checked == true) tablecreator.style.display = 'block';
@@ -267,7 +271,11 @@ function callmeplease2() {
 }
 let ctable = document.querySelector('#ctable')
 let clist = document.querySelector('#clist')
+ 
+//кінець вибору
 
+
+//сторення таблиці
 ctable.addEventListener('click', function () {
     let countTR = document.querySelector('.countTR')
     let countTD = document.querySelector('.countTD')
@@ -309,14 +317,15 @@ ctable.addEventListener('click', function () {
     //  
     //  
     //    
-
+    
+//функція для створення таблиць
     function createTable(parent, cols, rows) {
-        let table = document.createElement('table')
+        let table = document.createElement('table')  
         table.style.border = typeB.value + 'px';
 
         table.style.borderStyle = value;
         table.style.borderColor = value1;
-
+//приймаємо значення користувача
         for (let i = 0; i < rows; i++) {
             let tr = document.createElement('tr');
             tr.style.borderStyle = value;
@@ -347,16 +356,19 @@ ctable.addEventListener('click', function () {
     tablecreator.style.display = 'none';
     move.style.display = 'block';
 })
+//створюємо таблицю 
 clist.addEventListener('click', function () {
     move.style.display = 'none';
 })
+//зберігаємо зіни
 let save = document.querySelector('#save')
 save.addEventListener('click', function () {
     // table.style.display = 'block'
 
 })
+//зберігаємо зіни
 
-
+//Створюємо список 
 clist.addEventListener('click', function () {
     let co = document.querySelector('.countLi')
     let lists1 = document.querySelector('#lists1')
@@ -381,3 +393,4 @@ clist.addEventListener('click', function () {
 
 
 })
+//Створюємо список 
